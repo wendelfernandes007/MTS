@@ -1,0 +1,85 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #f4f7f6; scroll-behavior: smooth; }
+.container { max-width: 1100px; margin: auto; padding: 20px; }
+
+#contato {
+    background-image: url('img/essa\ 3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+
+/* Header */
+header { background: #a5dab2; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
+.logo span { color: #1ff36d; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { color: white; text-decoration: none; font-weight: 500; }
+
+
+/* Hero */
+.hero { height: 70vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/essa\ 2.webp'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.btn { background: #25d366; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; margin-top: 20px; transition: 0.3s; }
+
+/* Grid de Serviços */
+.servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
+.servico-item { background: white; padding: 30px; border-radius: 10px; text-align: center; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.servico-item:hover { transform: translateY(-10px); }
+.servico-item i { font-size: 2.5rem; color: #25d366; margin-bottom: 15px; }
+
+/* WhatsApp Tremer */
+.btn-whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; animation: tremer 2s infinite; }
+@keyframes tremer { 0%, 80% { transform: rotate(0); } 85% { transform: rotate(10deg); } 90% { transform: rotate(-10deg); } 95% { transform: rotate(10deg); } 100% { transform: rotate(0); } }
+
+/* Formulário */
+.contato-container { padding: 50px 20px; background: #fff; text-align: center; }
+.formulario-servico { max-width: 500px; margin: 30px auto; display: flex; flex-direction: column; gap: 15px; }
+.formulario-servico input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+.btn-enviar-form { background: #1a1a1a; color: white; border: none; padding: 15px; cursor: pointer; transition: 0.3s; }
+.btn-enviar-form:hover { background: #25d366; }
+
+/* Footer */
+
+.galeria-container {
+    padding: 50px 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.galeria-container h2 {
+    margin-bottom: 30px;
+    color: #002e5b;
+}
+
+.galeria-grid {
+    display: grid;
+    /* Cria colunas automáticas com no mínimo 250px de largura */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px; /* Espaço entre as fotos */
+}
+
+.galeria-item {
+    overflow: hidden; /* Esconde o excesso da imagem se ela for muito grande */
+    border-radius: 8px;
+    height: 250px; /* Mantém todas as molduras do mesmo tamanho */
+
+    
+}
+
+
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a foto preencher o quadrado sem achatar */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Efeito de zoom ao passar o mouse */
+.galeria-item img:hover {
+    transform: scale(1.1);
+}
+
